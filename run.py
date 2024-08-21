@@ -1,12 +1,20 @@
 #Basic Banking Interface
 
 #Functions for menu interface
+
 def show_balance():
 #Displays current balance to two decimal places (e.g. €5.46)
     print(f"Your current balance is €{balance:.2f}")
 
 def deposit():
-    x    
+#Prompts user to input deposit amount
+    amount = float(input("Please enter amount to be deposited: "))
+
+#Prevents user from entering a negative value
+    if amount > 0:
+        print("Invalid deposit amount. Please try again.")
+    else: 
+        return amount
 
 def withdraw():
     x
