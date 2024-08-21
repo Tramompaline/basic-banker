@@ -2,7 +2,8 @@
 
 #Functions for menu interface
 def show_balance():
-    x
+#Displays current balance to two decimal places (e.g. €5.46)
+    print(f"Your current balance is €{balance:.2f}")
 
 def deposit():
     x    
@@ -33,9 +34,10 @@ while is_running:
         withdraw()
     elif choice == '4':
         is_running = False
-    #Validates input and prevents incorrect inputs
+#Validates input and prevents incorrect inputs
     else:
         print("Invalid selection. Please try again") 
 
+#Prints upon exiting the program via option 4
 print("Thank you for choosing Python Bank!")   
 
