@@ -23,10 +23,12 @@ def withdraw():
 #Prevents user from withdrawing more than the current balance
     if amount > balance:
         print("Insufficient funds. Please try again")
+#Prevents program crashing when entering an invalid amount        
         return 0
 #Prevents user from inputting negative withdrawal amount
     elif amount < 0:
         print("Amount cannot be less than 0. Please try again")
+#Prevents program crashing when entering an invalid amount
         return 0
     else:
         return amount
@@ -48,13 +50,18 @@ while is_running:
 #Calls relevant function for selected menu option
     if choice == '1':
         show_balance()
+    
     elif choice == '2':
-#Adds deposit to balance figure to create new balance
+#Adds deposit amount to balance figure to create new balance
         balance += deposit()    
+
+#Subtracts withdrawal amount from balance figure to create new balance  
     elif choice == '3':
-        withdraw()
+        balance -= withdraw()
+    
     elif choice == '4':
         is_running = False
+
 #Validates input and prevents incorrect inputs
     else:
         print("Invalid selection. Please try again") 
