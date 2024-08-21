@@ -19,7 +19,15 @@ def deposit():
         return amount
 
 def withdraw():
-    x
+    amount = float(input("Enter amount you wish to withdraw: "))
+#Prevents user from withdrawing more than the current balance
+    if amount > balance:
+        print("Insufficient funds. Please try again")
+#Prevents user from inputting negative withdrawal amount
+    elif amount < 0:
+        print("Amount cannot be less than 0. Please try again")
+    else:
+        return amount
 
 balance = 0
 is_running = True
