@@ -1,5 +1,6 @@
 #Basic Banking Interface
 
+#Functions for menu interface
 def show_balance():
     x
 
@@ -12,6 +13,7 @@ def withdraw():
 balance = 0
 is_running = True
 
+#Prints menu selection options while program is running
 while is_running:
     print("Welcome To Python Bank!")
     print("1. Show Balance")
@@ -19,5 +21,16 @@ while is_running:
     print("3. Withdraw")
     print("4. Exit")
 
+#Input to select a menu option
     choice = input("Please select an option (1-4): ")
+
+#Calls relevant function for selected menu option
+    if choice == '1':
+        show_balance()
+    elif choice == '2':
+        deposit()    
+    elif choice == '3':
+        withdraw()
+    elif choice == '4':
+        is_running = False
 
