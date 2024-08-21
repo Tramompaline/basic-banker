@@ -23,9 +23,11 @@ def withdraw():
 #Prevents user from withdrawing more than the current balance
     if amount > balance:
         print("Insufficient funds. Please try again")
+        return 0
 #Prevents user from inputting negative withdrawal amount
     elif amount < 0:
         print("Amount cannot be less than 0. Please try again")
+        return 0
     else:
         return amount
 
