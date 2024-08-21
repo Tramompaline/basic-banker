@@ -33,4 +33,7 @@ while is_running:
         withdraw()
     elif choice == '4':
         is_running = False
+    #Validates input and prevents incorrect inputs
+    else:
+        print("Invalid selection. Please try again")    
 
