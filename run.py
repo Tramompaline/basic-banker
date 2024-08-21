@@ -11,8 +11,10 @@ def deposit():
     amount = float(input("Please enter amount to be deposited: "))
 
 #Prevents user from entering a negative value
-    if amount > 0:
+    if amount < 0:
         print("Invalid deposit amount. Please try again.")
+#Prevents program crashing when entering an invalid amount
+        return 0
     else: 
         return amount
 
@@ -37,7 +39,8 @@ while is_running:
     if choice == '1':
         show_balance()
     elif choice == '2':
-        deposit()    
+#Adds deposit to balance figure to create new balance
+        balance += deposit()    
     elif choice == '3':
         withdraw()
     elif choice == '4':
