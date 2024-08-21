@@ -35,5 +35,7 @@ while is_running:
         is_running = False
     #Validates input and prevents incorrect inputs
     else:
-        print("Invalid selection. Please try again")    
+        print("Invalid selection. Please try again") 
+
+print("Thank you for choosing Python Bank!")   
 
