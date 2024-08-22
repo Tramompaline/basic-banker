@@ -65,43 +65,40 @@ def print_divider():
     print(f"{Fore.BLUE}----------------------------------------")
 
 
-# Brings everything together under one main function
+# Main function to bring everything together
 def main():
     balance = 0
     is_running = True
 
-    # Prints menu selection options while program is running
+    print_welcome_banner()
+
     while is_running:
-        print("Welcome To Python Bank!")
-        print("1. Show Balance")
-        print("2. Deposit")
-        print("3. Withdraw")
-        print("4. Exit")
+        print(f"{Fore.YELLOW}{Style.BRIGHT}\nMenu Options:")
+        print(f"{Fore.CYAN}1. Show Balance")
+        print(f"{Fore.CYAN}2. Deposit")
+        print(f"{Fore.CYAN}3. Withdraw")
+        print(f"{Fore.CYAN}4. Exit")
 
         # Input to select a menu option
-        choice = input("Please select an option (1-4):\n")
+        choice = input(f"{Fore.YELLOW}Please select an option (1-4):\n")
 
         # Calls relevant function for selected menu option
         if choice == '1':
+            print_divider()
             show_balance(balance)
-    
         elif choice == '2':
-            # Adds deposit amount to balance figure to create new balance
-            balance += deposit()    
-
+            print_divider()
+            balance += deposit()
         elif choice == '3':
-            # Subtracts withdrawal amount from balance figure to create new balance  
+            print_divider()
             balance -= withdraw(balance)
-    
         elif choice == '4':
             is_running = False
-
-        # Validates input and prevents incorrect inputs
         else:
-            print("Invalid selection. Please try again") 
+            print(f"{Fore.RED}Invalid selection. Please try again.")
 
-    # Prints upon exiting the program via option 4
-    print("Thank you for choosing Python Bank!")   
+    print_divider()
+    print(f"{Fore.GREEN}Thank you for choosing Python Bank!")
 
 if __name__ == "__main__":
     main()
