@@ -8,7 +8,7 @@ def show_balance(balance):
 
 def deposit():
 #Prompts user to input deposit amount
-    amount = float(input("Please enter amount to be deposited: "))
+    amount = float(input("Please enter amount to be deposited:\n"))
 
 #Prevents user from entering a negative value
     if amount < 0:
@@ -19,7 +19,7 @@ def deposit():
         return amount
 
 def withdraw(balance):
-    amount = float(input("Enter amount you wish to withdraw: "))
+    amount = float(input("Enter amount you wish to withdraw:\n"))
 #Prevents user from withdrawing more than the current balance
     if amount > balance:
         print("Insufficient funds. Please try again")
@@ -47,7 +47,7 @@ def main()
         print("4. Exit")
 
 #Input to select a menu option
-        choice = input("Please select an option (1-4): ")
+        choice = input("Please select an option (1-4):\n")
 
 #Calls relevant function for selected menu option
         if choice == '1':
