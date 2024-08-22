@@ -23,17 +23,20 @@ def print_welcome_banner():
 def show_balance(balance):
     print(f"{Fore.GREEN}Your current balance is €{balance:.2f}")
 
-# Prompts user to input deposit amount
+# Function to handle deposits
 def deposit():
     try:
         amount = float(input("Please enter amount to be deposited:\n"))
         if amount < 0:
-            print("Invalid deposit amount. Please try again.")
+            print(f"{Fore.RED}Invalid deposit amount. Please try again.")
             return 0
         else:
+            print(f"{Fore.GREEN}Processing your deposit...")
+            time.sleep(1)  # Simulate processing time
+            print(f"{Fore.GREEN}Deposit successful!")
             return amount
     except ValueError:
-        print("Invalid input. Please enter a valid number.")
+        print(f"{Fore.RED}Invalid input. Please enter a valid number.")
         return 0
 
 # Prompts user to input withdrawal amount
