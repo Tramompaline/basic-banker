@@ -32,27 +32,32 @@ def deposit():
             return 0
         else:
             print(f"{Fore.GREEN}Processing your deposit...")
-            time.sleep(1)  # Simulate processing time
+            # Simulate processing time
+            time.sleep(1)  
             print(f"{Fore.GREEN}Deposit successful!")
             return amount
     except ValueError:
         print(f"{Fore.RED}Invalid input. Please enter a valid number.")
         return 0
 
-# Prompts user to input withdrawal amount
+# Function to handle withdrawals
 def withdraw(balance):
     try:
         amount = float(input("Enter amount you wish to withdraw:\n"))
         if amount > balance:
-            print("Insufficient funds. Please try again.")
+            print(f"{Fore.RED}Insufficient funds. Please try again.")
             return 0
         elif amount < 0:
-            print("Amount cannot be less than 0. Please try again.")
+            print(f"{Fore.RED}Amount cannot be less than 0. Please try again.")
             return 0
         else:
+            print(f"{Fore.GREEN}Processing your withdrawal...")
+            # Simulate processing time
+            time.sleep(1)  
+            print(f"{Fore.GREEN}Withdrawal successful!")
             return amount
     except ValueError:
-        print("Invalid input. Please enter a valid number.")
+        print(f"{Fore.RED}Invalid input. Please enter a valid number.")
         return 0
 
 # Brings everything together under one main function
