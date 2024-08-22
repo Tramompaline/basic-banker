@@ -60,6 +60,11 @@ def withdraw(balance):
         print(f"{Fore.RED}Invalid input. Please enter a valid number.")
         return 0
 
+# Function to print a divider between sections
+def print_divider():
+    print(f"{Fore.BLUE}----------------------------------------")
+
+
 # Brings everything together under one main function
 def main():
     balance = 0
