@@ -1,32 +1,60 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Python Bank CLI Application
 
-Welcome,
+## Overview
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+Python Bank is a simple command-line interface (CLI) banking application built using Python. It allows users to manage their bank account by checking their balance, making deposits, and withdrawing funds, all within a user-friendly interface enhanced with color and styling.
 
-## Reminders
+This project demonstrates basic Python skills, including input handling, conditional statements, and loops. It also uses the colorama library to add color and style to the terminal output, making the user experience more engaging.
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Features
 
-## Creating the Heroku app
+![main-menu](/images/main-menu.png)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Check Balance:  View the current balance of your account.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Deposit Funds: Add money to your account.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+Withdraw Funds: Remove money from your account, with validation to prevent overdrafts.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+Colorful Interface: The application uses color and styling to enhance the user experience.
 
-Connect your GitHub repository and deploy as normal.
+User-Friendly Prompts: Clear prompts and feedback are provided for each action, including error handling for invalid inputs.
 
-## Constraints
+## Operation
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+Simply type 1, 2, 3 or 4 and press enter to select your desired menu option. You will then be prompted as to the next input. 
 
----
+## Testing
 
-Happy coding!
+I have manually tested the projet by doing the following:
+
+- Pass code through Pep8 filter and confirm no errors.
+- Test the input by inputting valid and invalid options.
+- Tested in internal terminal and on Code Institute Heroku terminal. 
+
+## Solved bugs 
+
+- Syntax errors and indentation errors causing the program to not load correctly.
+- Add 'return 0' to functions to prevent program crashing when invalid data is entered.
+
+## Remaining bugs
+
+No known bugs remaining.
+
+## Deployment
+
+This project was deployed using Code Institutes mock terminal for Heroku.
+
+Steps for deployment:
+
+- Fork or clone this repository
+- Create a new Heroku app
+- Set the buildbacks to 'Python' and 'NodeJS' in that order.
+- Link the Heroku app to the repository
+- Click on 'Deploy'
+
+## Credits
+
+Code Institute for the deployment terminal
+
+
