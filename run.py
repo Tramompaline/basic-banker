@@ -34,7 +34,7 @@ def withdraw(balance):
         return amount
 
 #Brings everything together under one main function
-def main()
+def main():
     balance = 0
     is_running = True
 
