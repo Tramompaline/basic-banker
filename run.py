@@ -6,9 +6,10 @@ def show_balance(balance):
 #Displays current balance to two decimal places (e.g. €5.46)
     print(f"Your current balance is €{balance:.2f}")
 
-def deposit():
 #Prompts user to input deposit amount
-    amount = float(input("Please enter amount to be deposited:\n"))
+def deposit():
+    try:
+        amount = float(input("Please enter amount to be deposited:\n"))
 
 #Prevents user from entering a negative value
     if amount < 0:
@@ -17,9 +18,14 @@ def deposit():
         return 0
     else: 
         return amount
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+        return 0
+
 
 def withdraw(balance):
-    amount = float(input("Enter amount you wish to withdraw:\n"))
+    try:
+        amount = float(input("Enter amount you wish to withdraw:\n"))
 #Prevents user from withdrawing more than the current balance
     if amount > balance:
         print("Insufficient funds. Please try again")
@@ -32,6 +38,10 @@ def withdraw(balance):
         return 0
     else:
         return amount
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+        return 0
+
 
 #Brings everything together under one main function
 def main():
@@ -59,7 +69,7 @@ def main():
 
 #Subtracts withdrawal amount from balance figure to create new balance  
         elif choice == '3':
-            balance -= withdraw(withdraw)
+            balance -= withdraw(balance)
     
         elif choice == '4':
             is_running = False
