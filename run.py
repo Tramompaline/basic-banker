@@ -1,16 +1,20 @@
 #Basic Banking Interface
 
 # Functions for menu interface
+from colorama import init, Fore, Style
+
+init(autoreset=True)
+
+def show_balance(balance):
+    print(f"{Fore.GREEN}Your current balance is €{balance:.2f}")
+
 def print_welcome_banner():
+    print(f"{Fore.CYAN}{Style.BRIGHT}")
     print(r"""
     =====================================
     |        Welcome to Python Bank      |
     =====================================
     """)
-
-def show_balance(balance):
-    # Displays current balance to two decimal places (e.g. €5.46)
-    print(f"Your current balance is €{balance:.2f}")
 
 # Prompts user to input deposit amount
 def deposit():
