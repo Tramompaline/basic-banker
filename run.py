@@ -1,10 +1,13 @@
-#Basic Banking Interface
+# Basic Banking Interface
 
-# Functions for menu interface
+# Import necessary libraries
 from colorama import init, Fore, Style
+import time
 
+# Initialize colorama
 init(autoreset=True)
 
+# Function to display a welcome banner with ASCII art
 def show_balance(balance):
     print(f"{Fore.GREEN}Your current balance is €{balance:.2f}")
 
@@ -15,6 +18,10 @@ def print_welcome_banner():
     |        Welcome to Python Bank      |
     =====================================
     """)
+
+# Function to display the current balance
+def show_balance(balance):
+    print(f"{Fore.GREEN}Your current balance is €{balance:.2f}")
 
 # Prompts user to input deposit amount
 def deposit():
