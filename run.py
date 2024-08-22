@@ -1,6 +1,12 @@
 #Basic Banking Interface
 
 # Functions for menu interface
+def print_welcome_banner():
+    print(r"""
+    =====================================
+    |        Welcome to Python Bank      |
+    =====================================
+    """)
 
 def show_balance(balance):
     # Displays current balance to two decimal places (e.g. €5.46)
